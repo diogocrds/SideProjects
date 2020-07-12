@@ -8,13 +8,15 @@ import {
   FormControl,
   InputLabel,
   Input,
+  Avatar,
 } from '@material-ui/core'
+import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight'
 import Modal from '@material-ui/core/Modal'
 import { makeStyles } from '@material-ui/core/styles'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
+import AccessTimeIcon from '@material-ui/icons/AccessTime'
 import db from '../firebase'
 import firebase from 'firebase'
-
 function getModalStyle() {
   const top = 50
   const left = 50
@@ -49,11 +51,12 @@ function Todo(props) {
       { merge: true }
     )
     setOpen(false)
+    setInput('')
   }
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <h2 id='simple-modal-title'>Edit ToDo</h2>
-      <form>
+      <form className='edit-input'>
         <FormControl>
           <InputLabel>Write a todo</InputLabel>
           <Input
@@ -62,35 +65,54 @@ function Todo(props) {
             onChange={(event) => setInput(event.target.value)}
           />
         </FormControl>
-        <Button
-          type='submit'
-          onClick={updateTodo}
-          variant='contained'
-          color='primary'
-        >
-          Edit Todo
-        </Button>
+        <div className='edit-buttons'>
+          <Button
+            type='submit'
+            onClick={updateTodo}
+            variant='contained'
+            color='primary'
+            className='btn'
+          >
+            Edit
+          </Button>
+          <Button
+            onClick={(e) => setOpen(false)}
+            variant='contained'
+            color='secondary'
+            className='btn'
+          >
+            Exit
+          </Button>
+        </div>
       </form>
-      <Button
-        onClick={(e) => setOpen(false)}
-        variant='contained'
-        color='secondary'
-      >
-        Exit
-      </Button>
     </div>
   )
+  let dateformat = require('dateformat')
+  let date = props.todo.timestamp && props.todo.timestamp.toDate()
   return (
     <>
       <Modal open={open} onClose={(e) => setOpen(false)}>
         <div>{body}</div>
       </Modal>
-      <List>
+      <List className='todo'>
         <ListItem>
-          <ListItemAvatar></ListItemAvatar>
-          <ListItemText primary={props.todo.todo} secondary='Deadline' />
+          <ListItemAvatar>
+            <Avatar>
+              <SubdirectoryArrowRightIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary={props.todo.todo}
+            secondary={
+              <React.Fragment>
+                <AccessTimeIcon className='todo-icon' />
+                {dateformat(date, ' dddd, mmmm dS, yyyy, h:MM:ss TT')}
+              </React.Fragment>
+            }
+          />
         </ListItem>
         <Button
+          className='btn'
           onClick={(e) => setOpen(true)}
           variant='contained'
           color='primary'
@@ -98,6 +120,7 @@ function Todo(props) {
           Edit
         </Button>
         <Button
+          className='btn'
           onClick={(event) => {
             db.collection('todos').doc(props.todo.id).delete()
           }}

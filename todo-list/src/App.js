@@ -16,7 +16,11 @@ function App() {
       .orderBy('timestamp', 'desc')
       .onSnapshot((snapshot) => {
         setTodos(
-          snapshot.docs.map((doc) => ({ id: doc.id, todo: doc.data().todo }))
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            todo: doc.data().todo,
+            timestamp: doc.data().timestamp,
+          }))
         )
       })
   }, [])
@@ -34,8 +38,8 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Hello World!</h1>
-      <form>
+      <h1>ToDo List</h1>
+      <form className='add-input'>
         <FormControl>
           <InputLabel>Write a todo</InputLabel>
           <Input
@@ -49,11 +53,12 @@ function App() {
           onClick={addTodo}
           variant='contained'
           color='primary'
+          className='btn'
         >
           Add Todo
         </Button>
       </form>
-      <ul>
+      <ul className='todo-list'>
         {todos.map((todo) => (
           <Todo todo={todo} />
         ))}
