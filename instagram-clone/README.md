@@ -31,7 +31,7 @@ npm start
 firebase init
 (x) Hosting: Configure and deploy Firebase Hosting sites
 (x) Use an existing project
-(x) todolist-c1bac
+(x) instagram-clone-5b53e
 Publid directory? build
 Single-page? Yes
 npm run build && firebase deploy
