@@ -13,6 +13,7 @@
 
 ```sh
 npx create-react-app todo-list
+npm i firebase
 npm install @material-ui/core
 npm install @material-ui/icons
 npm install dateformat
