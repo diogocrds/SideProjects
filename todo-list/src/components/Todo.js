@@ -16,7 +16,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 import AccessTimeIcon from '@material-ui/icons/AccessTime'
 import db from '../firebase'
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
 function getModalStyle() {
   const top = 50
   const left = 50

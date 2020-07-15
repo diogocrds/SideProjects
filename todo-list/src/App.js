@@ -3,7 +3,8 @@ import { Button, FormControl, Input, InputLabel } from '@material-ui/core'
 import './App.css'
 import Todo from './components/Todo'
 import db from './firebase'
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -60,7 +61,7 @@ function App() {
       </form>
       <ul className='todo-list'>
         {todos.map((todo) => (
-          <Todo todo={todo} />
+          <Todo key={todo.id} todo={todo} />
         ))}
       </ul>
     </div>
