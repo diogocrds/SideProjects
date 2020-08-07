@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "class": "Death Knight",
+    "specs": [
+      {
+        "name": "general",
+        "items": [
+          {
+            "id": 1,
+            "name": "Death's Embrace",
+            "desc": "Increases the duration of Anti-Magic Shell by 100% and any damage it absorbs heals you.",
+            "slots": ["Neck", "Wrist"]
+          },
+          {
+            "id": 2,
+            "name": "Grip of the Everlasting",
+            "desc": "For 3 sec after casting Death Grip, you may cast the spell a second time without regard for its cooldown.",
+            "slots": ["Waist", "Feet"]
+          },
+          {
+            "id": 3,
+            "name": "Phearomones",
+            "desc": "You and your minions gain 10% Haste while you are inside your Death and Decay and enemies damaged by your Death and Decay have a chance to cower in place for 3 sec.",
+            "slots": ["Head", "Shoulder"]
+          },
+          {
+            "id": 4,
+            "name": "Superstrain",
+            "desc": "Your Frost Fever, Blood Plague, and Virulent Plague also apply the other two diseases at reduced effectiveness.",
+            "slots": ["Neck", "Chest"]
+          }
+        ]
+      },
+      {
+        "name": "blood",
+        "items": [
+          {
+            "name": "Bryndaor's Might",
+            "desc": "Death Strike refunds 15% of Runic Power spent if it heals you for more than 10% of your maximum health.",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "name": "aaa",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      },
+      {
+        "name": "frost",
+        "items": [
+          {
+            "name": "bbb",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      },
+      {
+        "name": "unholy",
+        "items": [
+          {
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "class": "Demon Hunter",
+    "specs": [
+      {
+        "name": "general",
+        "items": [
+          {
+            "id": 1,
+            "name": "Death's Embrace",
+            "desc": "Increases the duration of Anti-Magic Shell by 100% and any damage it absorbs heals you.",
+            "slots": ["Neck", "Wrist"]
+          }
+        ]
+      }
+    ]
+  }
+]

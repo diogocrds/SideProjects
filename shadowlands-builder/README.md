@@ -6,6 +6,19 @@
 
 ---
 
+## Installing
+
+```sh
+npx create-react-app todo-list
+npm install react-router-dom
+```
+
+## Running
+
+```sh
+npm start
+```
+
 ## License
 
 MIT

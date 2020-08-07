@@ -57,14 +57,25 @@ body {
 }
 .classes .classes__item {
   display: flex;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+}
+.classes .classes__item:last-child {
+  border-bottom: none;
 }
 .classes__item .name {
-  width: 200px;
+  width: 150px;
 }
-.classes__item .specs span {
+.classes__item .specs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.classes__item .specs .spec__name {
   cursor: pointer;
   color: #3d1d94;
-  margin-right: 5px;
+  margin-right: 15px;
 }
 .classes__item .specs span:hover {
   text-decoration: underline;

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Death Knight",
+    "specs": ["Blood", "Frost", "Unholy"]
+  },
+  {
+    "id": 2,
+    "name": "Demon Hunter",
+    "specs": ["Havoc", "Vengeance"]
+  },
+  {
+    "id": 3,
+    "name": "Druid",
+    "specs": ["Balance", "Feral", "Guardian", "Restoration"]
+  },
+  {
+    "id": 4,
+    "name": "Hunter",
+    "specs": ["Beast Mastery", "Marksmanship", "Survival"]
+  },
+  {
+    "id": 5,
+    "name": "Mage",
+    "specs": ["Arcane", "Fire", "Frost"]
+  },
+  {
+    "id": 6,
+    "name": "Monk",
+    "specs": ["Brewmaster", "Mistweaver", "Windwalker"]
+  },
+  {
+    "id": 7,
+    "name": "Paladin",
+    "specs": ["Holy", "Protection", "Retribution"]
+  },
+  {
+    "id": 8,
+    "name": "Priest",
+    "specs": ["Discipline", "Holy", "Shadow"]
+  },
+  {
+    "id": 9,
+    "name": "Rogue",
+    "specs": ["Assassination", "Outlaw", "Subtlety"]
+  },
+  {
+    "id": 10,
+    "name": "Shaman",
+    "specs": ["Elemental", "Enhancement", "Restoration"]
+  },
+  {
+    "id": 11,
+    "name": "Warlock",
+    "specs": ["Affliction", "Demonology", "Destruction"]
+  },
+  {
+    "id": 12,
+    "name": "Warrior",
+    "specs": ["Arms", "Fury", "Protection"]
+  }
+]

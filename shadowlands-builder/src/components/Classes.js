@@ -1,59 +1,68 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Class from './Class'
+import classesData from './data/classes.json'
 
-/*const ClassesContext = {
-  none: null,
-  deathknight: {
-    specs: ['frost', 'unholy', 'blood'],
-  },
-  demonhunter: {
-    specs: ['havoc', 'vengeance'],
-  },
-}*/
-function Classes() {
+function Classes(props) {
   const [singleClass, setSingleClass] = useState('')
+  const [classList, setClassList] = useState([])
+
+  useEffect(() => {
+    if (classList.length === 0) {
+      setClassList(
+        classesData.map((doc) => ({
+          id: doc.id,
+          name: doc.name,
+          specs: doc.specs,
+        }))
+      )
+    }
+  }, [classList])
 
   const classTable = (
     <div className='classes'>
       <h3>Classes</h3>
-      <div className='classes__item'>
-        <div className='name'>Death Knight</div>
-        <div className='specs'>
-          <span onClick={() => setSingleClass('Blood')}>Blood</span>
-          <span onClick={() => setSingleClass('Frost')}>Frost</span>
-          <span onClick={() => setSingleClass('Unholy')}>Unholy</span>
+      {classList.map((c) => (
+        <div key={c.id} className='classes__item'>
+          <div className='name'>{c.name}</div>
+          <div className='specs'>
+            {c.specs.map((spec) => (
+              <div
+                className='spec__name'
+                key={c.id + spec}
+                onClick={() => setSingleClass({ class: c.name, spec: spec })}
+              >
+                {spec}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className='classes__item'>
-        <div className='name'>Demon Hunter</div>
-        <div className='specs'>
-          <span onClick={() => setSingleClass('Vengeance')}>Vengeance</span>
-          <span onClick={() => setSingleClass('Havoc')}>Havoc</span>
-        </div>
-      </div>
-      <div className='classes__item'>
-        <div className='name'>Druid</div>
-        <div className='specs'>
-          <span onClick={() => setSingleClass('Balance')}>Balance</span>
-          <span onClick={() => setSingleClass('Guardian')}>Guardian</span>
-          <span onClick={() => setSingleClass('Restoration')}>Restoration</span>
-          <span onClick={() => setSingleClass('Feral')}>Feral</span>
-        </div>
-      </div>
+      ))}
     </div>
   )
+  const [watchlistItem, setWatchlistItem] = useState('')
+  useEffect(() => {
+    if (watchlistItem !== '') {
+      props.onChange(watchlistItem)
+      setWatchlistItem('')
+    }
+  }, [watchlistItem, props])
+
   return (
     <div className='class__content'>
       {singleClass ? (
         <>
-          <Class name={singleClass} />{' '}
+          <Class
+            class={singleClass.class}
+            spec={singleClass.spec}
+            onChange={(event) => setWatchlistItem(event)}
+          />
           <button onClick={() => setSingleClass(null)} className='btn__back'>
             Back
           </button>
         </>
       ) : (
         classTable
-      )}{' '}
+      )}
     </div>
   )
 }

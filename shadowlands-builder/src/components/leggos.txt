@@ -1,0 +1,30 @@
+{
+      "name": "general",
+      "items": [
+        {
+          "id": 1,
+          "name": "Death's Embrace",
+          "desc":
+            "Increases the duration of  Anti-Magic Shell by 100% and any damage it absorbs heals you.",
+          "slots": ["Neck", "Wrist"],
+        },
+        {
+          "name": "Grip of the Everlasting",
+          "desc":
+            "For 3 sec after casting  Death Grip, you may cast the spell a second time without regard for its cooldown.",
+          "slots": ["Waist", "Feet"],
+        },
+        {
+          "name": "Phearomones",
+          "desc":
+            "You and your minions gain 10% Haste while you are inside your  Death and Decay and enemies damaged by your  Death and Decay have a chance to cower in place for 3 sec.",
+          "slots": ["Head", "Shoulder"],
+        },
+        {
+          "name": "Superstrain",
+          "desc":
+            "Your  Frost Fever,  Blood Plague, and  Virulent Plague also apply the other two diseases at reduced effectiveness.",
+          "slots": ["Neck", "Chest"],
+        },
+      ],
+    }
