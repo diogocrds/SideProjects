@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background-color: #f7f8fc;
+}
+
+.app__header {
+  background-color: white;
+  padding: 20px;
+  object-fit: contain;
+}
+
+.app__content {
+  width: 950px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.app__content .class__content {
+  position: relative;
+}
+.app__content .btn__back {
+  position: absolute;
+  padding: 10px;
+  top: 10px;
+  right: 60px;
+}
+
+.class__content .single-class {
+  width: 500px;
+  padding: 10px;
+  margin-right: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  min-height: 150px;
+}
+.app__content .classes {
+  width: 500px;
+  padding: 10px;
+  margin-right: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+.classes .classes__item {
+  display: flex;
+}
+.classes__item .name {
+  width: 200px;
+}
+.classes__item .specs span {
+  cursor: pointer;
+  color: #3d1d94;
+  margin-right: 5px;
+}
+.classes__item .specs span:hover {
+  text-decoration: underline;
+}
+
+.app__content .watchlist {
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+.watchlist .watchlist__item {
+  display: flex;
+}
+.watchlist__item .name {
+  width: 350px;
+}
+.watchlist .watchlist__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
