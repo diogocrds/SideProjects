@@ -21,29 +21,38 @@ function Classes(props) {
   const classTable = (
     <div className='classes'>
       <h3>Classes</h3>
-      {classList.map((c) => (
-        <div key={c.id} className='classes__item'>
-          <div className='name'>{c.name}</div>
-          <div className='specs'>
-            {c.specs.map((spec) => (
-              <div
-                className='spec__name'
-                key={c.id + spec}
-                onClick={() => setSingleClass({ class: c.name, spec: spec })}
-              >
-                {spec}
-              </div>
-            ))}
+      {classList
+        .filter(
+          (c) =>
+            c.name === 'Death Knight' ||
+            c.name === 'Demon Hunter' ||
+            c.name === 'Druid'
+        )
+        .map((c) => (
+          <div key={c.id} className='classes__item'>
+            <div className='name'>{c.name}</div>
+            <div className='specs'>
+              {c.specs.map((spec) => (
+                <div
+                  className='spec__name'
+                  key={c.id + spec}
+                  onClick={() => setSingleClass({ class: c.name, spec: spec })}
+                >
+                  {spec}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   )
-  const [watchlistItem, setWatchlistItem] = useState('')
+  const [watchlistItem, setWatchlistItem] = useState(null)
   useEffect(() => {
-    if (watchlistItem !== '') {
+    if (watchlistItem !== null) {
+      console.log('classes add n: ' + watchlistItem.name)
+      console.log('classes add c: ' + watchlistItem.class)
       props.onChange(watchlistItem)
-      setWatchlistItem('')
+      setWatchlistItem(null)
     }
   }, [watchlistItem, props])
 

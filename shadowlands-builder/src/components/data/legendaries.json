@@ -4,7 +4,7 @@
     "class": "Death Knight",
     "specs": [
       {
-        "name": "general",
+        "name": "General",
         "items": [
           {
             "id": 1,
@@ -33,29 +33,57 @@
         ]
       },
       {
-        "name": "blood",
+        "name": "Blood",
         "items": [
           {
+            "id": 1,
             "name": "Bryndaor's Might",
             "desc": "Death Strike refunds 15% of Runic Power spent if it heals you for more than 10% of your maximum health.",
             "slots": ["Feet", "Back"]
           },
           {
-            "name": "aaa",
-            "desc": "aaa",
-            "slots": ["Feet", "Back"]
+            "id": 2,
+            "name": "Crimson Rune Weapon",
+            "desc": "When a charge of  Bone Shield is consumed, the cooldown of  Dancing Rune Weapon is reduced by 30 sec. Additionally, when  Dancing Rune Weapon fades, your Rune regeneration rate is increased by 40% for 10 sec.",
+            "slots": ["Shoulder", "Hands"]
+          },
+          {
+            "id": 3,
+            "name": "Gorefiend's Domination",
+            "desc": " Heart Strike reduces the remaining cooldown on  Vampiric Blood by 2 seconds.",
+            "slots": ["Legs", "Feet"]
+          },
+          {
+            "id": 4,
+            "name": "Vampiric Aura",
+            "desc": "Your  Vampiric Blood ability also affects all party members for 50% of the effect it has on you.",
+            "slots": ["Chest", "Finger"]
           }
         ]
       },
       {
-        "name": "frost",
+        "name": "Frost",
         "items": [
           {
+            "id": 1,
             "name": "bbb",
             "desc": "aaa",
             "slots": ["Feet", "Back"]
           },
           {
+            "id": 2,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
             "name": "ccc",
             "desc": "aaa",
             "slots": ["Feet", "Back"]
@@ -63,15 +91,29 @@
         ]
       },
       {
-        "name": "unholy",
+        "name": "Unholy",
         "items": [
           {
+            "id": 1,
             "name": "ddd",
             "desc": "aaa",
             "slots": ["Feet", "Back"]
           },
           {
+            "id": 2,
             "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
             "desc": "aaa",
             "slots": ["Feet", "Back"]
           }
@@ -84,13 +126,240 @@
     "class": "Demon Hunter",
     "specs": [
       {
-        "name": "general",
+        "name": "General",
         "items": [
           {
             "id": 1,
-            "name": "Death's Embrace",
-            "desc": "Increases the duration of Anti-Magic Shell by 100% and any damage it absorbs heals you.",
-            "slots": ["Neck", "Wrist"]
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 2,
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      },
+      {
+        "name": "Havoc",
+        "items": [
+          {
+            "id": 1,
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 2,
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      },
+      {
+        "name": "Vengeance",
+        "items": [
+          {
+            "id": 1,
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 2,
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "class": "Druid",
+    "specs": [
+      {
+        "name": "General",
+        "items": [
+          {
+            "id": 1,
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 2,
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      },
+      {
+        "name": "Balance",
+        "items": [
+          {
+            "id": 1,
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 2,
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      },
+      {
+        "name": "Feral",
+        "items": [
+          {
+            "id": 1,
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 2,
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      },
+      {
+        "name": "Guardian",
+        "items": [
+          {
+            "id": 1,
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 2,
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          }
+        ]
+      },
+      {
+        "name": "Restoration",
+        "items": [
+          {
+            "id": 1,
+            "name": "ddd",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 2,
+            "name": "eee",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 3,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
+          },
+          {
+            "id": 4,
+            "name": "ccc",
+            "desc": "aaa",
+            "slots": ["Feet", "Back"]
           }
         ]
       }

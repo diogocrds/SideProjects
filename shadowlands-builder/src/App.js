@@ -5,26 +5,31 @@ import Watchlist from './components/Watchlist'
 
 function App() {
   const [watchlist, setWatchlist] = useState([])
-  const [watchlistItem, setWatchlistItem] = useState('')
+  const [watchlistItem, setWatchlistItem] = useState(null)
   const [resetWatchlist, setResetWatchlist] = useState(false)
 
   useEffect(() => {
     if (resetWatchlist) {
       console.log('reset')
       setWatchlist([])
-      setWatchlistItem('')
+      setWatchlistItem(null)
       console.log(watchlist)
       setResetWatchlist(false)
     }
   }, [resetWatchlist, watchlist, watchlistItem])
 
   useEffect(() => {
-    if (watchlistItem !== '') {
-      console.log(watchlistItem)
+    if (watchlistItem !== null) {
+      console.log('item add to the list n: ' + watchlistItem.name)
+      console.log('item add to the list c: ' + watchlistItem.class)
       setWatchlist(
-        watchlist.concat({ id: watchlist.length, name: watchlistItem })
+        watchlist.concat({
+          id: watchlist.length,
+          name: watchlistItem.name,
+          class: watchlistItem.class,
+        })
       )
-      setWatchlistItem('')
+      setWatchlistItem(null)
     }
   }, [watchlistItem, watchlist])
 
